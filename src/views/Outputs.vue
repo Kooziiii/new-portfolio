@@ -12,11 +12,12 @@
                         elevation="15"
                         dark
                         class="mx-auto"
+                        :href="item.link"
                 >
                     <div class="justify-space-between">
                         <div>
                             <v-card-title
-                                    class="black--text font-weight-bold pt-2 pb-2"
+                                    class="black--text font-weight-bold pt-2 pb-1 subtitle-1"
                                     v-text="item.title"
                             ></v-card-title>
                             <v-divider
@@ -25,30 +26,23 @@
                             ></v-divider>
                             <v-carousel
                                     cycle
-                                    height="400"
+                                    height="180"
                                     hide-delimiter-background
                                     show-arrows-on-hover
                             >
                                 <v-carousel-item
-                                        v-for="(slide, i) in slides"
+                                        v-for="(color, i) in colors"
                                         :key="i"
                                 >
                                     <v-sheet
                                             :color="colors[i]"
                                             height="100%"
                                     >
-                                        <v-row
-                                                class="fill-height"
-                                                align="center"
-                                                justify="center"
-                                        >
-                                            <div class="display-3">{{ slide }} Slide</div>
-                                        </v-row>
                                     </v-sheet>
                                 </v-carousel-item>
                             </v-carousel>
                             <v-card-subtitle
-                                    class="black--text font-weight-bold pt-10 body"
+                                    class="black--text font-weight-bold pt-5 body"
                                     v-text="item.subtitle"
                             ></v-card-subtitle>
                             <v-divider
@@ -57,23 +51,13 @@
                             >
                             </v-divider>
                             <v-card-text
-                                    class="black--text font-weight-bold"
+                                    class="black--text font-weight-bold pb-1 pt-3"
                             >・言語/FW/TOOL
                             </v-card-text>
                             <v-card-text
-                                    class="black--text font-weight-bold"
-                                    v-text="item.textmain"
+                                    class="black--text font-weight-bold pb-2 pt-1"
+                                    v-text="item.skill"
                             >
-                            </v-card-text>
-                            <v-card-text
-                                    class="black--text font-weight-bold"
-                            >・サイトはこちらから↓
-                            </v-card-text>
-                            <v-card-text
-                                    class="black--text font-weight-bold"
-                                    v-text="item.textmain"
-                            >
-
                             </v-card-text>
                         </div>
 
@@ -88,40 +72,44 @@
         inset: false,
         data: () => ({
             colors: [
-                'indigo',
                 'warning',
                 'pink darken-2',
                 'red lighten-1',
-                'deep-purple accent-4',
             ],
-            slides: [
-                'First',
-                'Second',
-                'Third',
-                'Fourth',
-                'Fifth',
+            images: [
+                'warning',
+                'pink darken-2',
+                'red lighten-1',
             ],
             items: [
                 {
                     color: 'grey lighten-4',
-                    title: '企業Webサイト制作',
-                    subtitle:'wordpressを使用して企業のHPを制作致しました。\n' +
-                        '公式のテーマ「Lightning」を使用したのでレスポンシ\n' +
-                        'ブ対応です。ドメインの取得・レンタルサー\n' +
-                        'バー設定までまるっと行いました。制作期間が一週\n' +
-                        '間程だったので満足のいく出来ではないので更新中。',
-                    textmain:'',
-                    text: 'Foster the People',
+                    title: 'コーポレートサイト',
+                    subtitle:'wordpressを使用し、レスポンシブ対応のWebサイトを制作しました。\n' +
+                        'WordPressの構築からドメインの取得・レンタルサー\n' +
+                        'バー設定まで全ての工程を担当しました。現在もバージョンアップ対応や\n' +
+                        '改修を含む、運用・保守を行なっております。',
+                    skill:'　HTML/CSS/PHP/WordPress/x-server...',
+                    link: 'http://borderless-p.jp/',
                 },
                 {
                     color: 'grey lighten-4',
                     title: 'ポートフォリオサイト',
-                    text: 'Ellie Goulding',
+                    subtitle:'本ポートフォリオサイトです。vue.js＋firebaseでサーバーレスかつSPAの\n' +
+                        '設計にしました。CMS等を使用せずに1からWebサイトを作るのが初めてだった為、分からない\n'+
+                        'ことも多々ありましたが、なんとか完成させることができました。\n' ,
+                    skill:'　JavaScript(Vue.js)/firebase...',
+                    link: 'https://sendmail-5a478.web.app',
                 },
                 {
                     color: 'grey lighten-4',
-                    title: 'カジュアルゲーム製作',
-                    text: 'Ellie Goulding',
+                    title: '【製作中】スマホカジュアルゲーム',
+                    subtitle:'友人のゲームエンジニアカジュアル\n' +
+                        'ゲームを製作しております。IOS、Androidともに対応しております。\n' +
+                        '私の主な担当は企画、画面の設計・実装、外注先折衝などです。\n' +
+                        'リリースは2020年7月頃を予定しております。(画像はイメージです。)',
+                    skill:'　Unity(C#)/JavaScript/GCP/Github...',
+
                 }
             ],
         }),
