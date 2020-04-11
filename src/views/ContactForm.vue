@@ -1,10 +1,14 @@
 
 <template>
     <div>
-        <v-layout justify-center>
+        <v-layout
+                justify-center
+                class="mt-12"
+        >
             <v-card
-                width="80%"
-                class="mt-12 pb-5 px-12">
+                    elevation="15"
+                    width="80%"
+                    class="mt-12 pt-0 pb-5 px-10">
                 <v-container>
                     <v-spacer></v-spacer>
                     <v-layout

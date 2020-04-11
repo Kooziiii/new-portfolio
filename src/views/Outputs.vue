@@ -5,7 +5,7 @@
                     v-for="(item, i) in items"
                     :key="i"
                     cols="4"
-                    class="mt-3 px-3"
+                    class="pt-10 mt-12 px-3"
             >
                 <v-card
                         :color="item.color"
@@ -25,7 +25,6 @@
                                     class="grey lighten-1"
                             ></v-divider>
                             <v-carousel
-                                    cycle
                                     height="180"
                                     hide-delimiter-background
                                     show-arrows-on-hover
@@ -74,17 +73,13 @@
             colors: [
                 'warning',
                 'pink darken-2',
-                'red lighten-1',
+                'red lighten-1'
             ],
-            images: [
-                'warning',
-                'pink darken-2',
-                'red lighten-1',
-            ],
+
             items: [
                 {
                     color: 'grey lighten-4',
-                    title: 'コーポレートサイト',
+                    title: '【運営中】コーポレートサイト',
                     subtitle:'wordpressを使用し、レスポンシブ対応のWebサイトを制作しました。\n' +
                         'WordPressの構築からドメインの取得・レンタルサー\n' +
                         'バー設定まで全ての工程を担当しました。現在もバージョンアップ対応や\n' +
@@ -94,22 +89,21 @@
                 },
                 {
                     color: 'grey lighten-4',
-                    title: 'ポートフォリオサイト',
-                    subtitle:'本ポートフォリオサイトです。vue.js＋firebaseでサーバーレスかつSPAの\n' +
+                    title: '【運営中】ポートフォリオサイト',
+                    subtitle:'本ポートフォリオサイトです。vue.js＋firebaseでサーバーレスかつSPA\n' +
                         '設計にしました。CMS等を使用せずに1からWebサイトを作るのが初めてだった為、分からない\n'+
                         'ことも多々ありましたが、なんとか完成させることができました。\n' ,
-                    skill:'　JavaScript(Vue.js)/firebase...',
+                    skill:'　JavaScript(Vue.js,Chart.js)/firebase...',
                     link: 'https://sendmail-5a478.web.app',
                 },
                 {
                     color: 'grey lighten-4',
                     title: '【製作中】スマホカジュアルゲーム',
-                    subtitle:'友人のゲームエンジニアカジュアル\n' +
+                    subtitle:'友人のゲームエンジニアとカジュアル\n' +
                         'ゲームを製作しております。IOS、Androidともに対応しております。\n' +
                         '私の主な担当は企画、画面の設計・実装、外注先折衝などです。\n' +
                         'リリースは2020年7月頃を予定しております。(画像はイメージです。)',
                     skill:'　Unity(C#)/JavaScript/GCP/Github...',
-
                 }
             ],
         }),
