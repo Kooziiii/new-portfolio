@@ -20,45 +20,27 @@
                             borderColor: "rgba(66,133,244,0.8)",
                             borderWidth:"2",
                             pointBackgroundColor:"rgba(66,133,244,0.8)",
-                            data: [10, 5, 5, 2, 5]
-                        }
+                            data: [3,2,2,3,3]
+                        },
                     ]
                 },
                 {
+                    scale: {
+                        ticks: {
+                            stepSize: 1, // 目盛の間隔
+                                max: 5, //最大値
+                                beginAtZero: true
+                            }
+                    },
+                    legend: {
+                        display: false
+                    },
                     responsive: true,
                     maintainAspectRatio: false,
-                    options: {
-                        legend: {
-                            display: false
-                        },
-                        scales: {
-                            ticks: {
-                                stepSize: 1, // 目盛の間隔
-                                max: 10, //最大値
-                                beginAtZero: true},
-                            xAxes: [
-                                {
-                                    display: false,
-                                    stacked: false,
-                                    gridLines: {
-                                        display: false
-                                    }
-                                }
-                            ],
-                            yAxes: [
-                                {
-                                    display: false,
-                                    stacked: false,
-                                    gridLines: {
-                                        display: false
-                                    }
-                                }
-                            ]
-                        }
-                    }
                 }
             );
         }
     };
+
 </script>
 
