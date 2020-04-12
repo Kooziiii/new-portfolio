@@ -37,8 +37,4 @@
 
 <style scoped>
 
-    .span{
-
-    }
-
 </style>

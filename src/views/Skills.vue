@@ -45,27 +45,28 @@
                         </v-col>
                         <v-col cols="6">
                             <v-card-title
-                                    class="justify-center"
+                                    class="justify-center font-weight-bold"
                                     v-text="item.title"
                             >
                             </v-card-title>
                             <v-card-text
                                     v-text="item.headtext"
+                                    class="font-weight-bold"
                             >
                             </v-card-text>
                             <v-list>
-                                <v-list-item-content class="py-0 pl-5 font-weight-regular">======================</v-list-item-content>
-                                <v-list-item-content v-text="item.skill01" class="body-2 py-0 pl-5 font-weight-regular"></v-list-item-content>
-                                <v-list-item-content v-text="item.skill02" class="body-2 py-0 pl-5 font-weight-regular"></v-list-item-content>
-                                <v-list-item-content v-text="item.skill03" class="body-2 py-0 pl-5 font-weight-regular"></v-list-item-content>
-                                <v-list-item-content v-text="item.skill04" class="body-2 py-0 pl-5 font-weight-regular"></v-list-item-content>
-                                <v-list-item-content v-text="item.skill05" class="body-2 py-0 pl-5 font-weight-regular"></v-list-item-content>
-                                <v-list-item-content class="py-0 pl-5 font-weight-regular">======================</v-list-item-content>
+                                <v-list-item-content class="py-0 pl-5">======================</v-list-item-content>
+                                <v-list-item-content v-text="item.skill01" class="body-2 py-0 pl-5"></v-list-item-content>
+                                <v-list-item-content v-text="item.skill02" class="body-2 py-0 pl-5"></v-list-item-content>
+                                <v-list-item-content v-text="item.skill03" class="body-2 py-0 pl-5"></v-list-item-content>
+                                <v-list-item-content v-text="item.skill04" class="body-2 py-0 pl-5"></v-list-item-content>
+                                <v-list-item-content v-text="item.skill05" class="body-2 py-0 pl-5"></v-list-item-content>
+                                <v-list-item-content class="py-0 pl-5">======================</v-list-item-content>
                             </v-list>
                             <v-card-text
-                                    class="py-0"
+                                    class="py-0 font-weight-bold"
                             >※なお現場での経験はありません。私の主観による評価になります。</v-card-text>
-                            <v-card-text>チャートの見方：①基本的な構文の理解 ②数ヶ月学んだ ③ものを作ったことがある ④1人称で動ける(つもり) ⑤他人に説明ができる</v-card-text>
+                            <v-card-text class="font-weight-bold">チャートの見方：①基本的な構文の理解 ②数ヶ月学んだ ③ものを作ったことがある ④1人称で動ける(つもり) ⑤他人に説明ができる</v-card-text>
                         </v-col>
                         </v-row>
                     </v-card>
