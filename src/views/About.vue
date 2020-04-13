@@ -7,7 +7,6 @@
                   color='grey lighten-4'
                   elevation="15"
                   dark
-                  height="250px"
           >
             <div class="justify-space-between">
               <div>
@@ -23,7 +22,7 @@
                     <v-list-item-avatar
                             width="100px"
                             height="100px"
-                            class="mt-9 ml-3"
+                            class="mt-5 ml-3"
                     >
                       <v-img
                               class="elevation-6"
@@ -31,7 +30,7 @@
                       ></v-img>
                   </v-list-item-avatar>
                   </v-col>
-                  <v-col cols="6" class="pl-0 pt-0 mt-7">
+                  <v-col cols="6" class="pl-0 py-0 mt-12 mb-10">
                     <v-card-text
                             class="black--text font-weight-bold py-0 caption"
                     >ニックネーム</v-card-text>
@@ -57,7 +56,6 @@
                   color='grey lighten-4'
                   elevation="15"
                   dark
-                  height="250px"
           >
             <div class="justify-space-between">
               <div>
@@ -86,7 +84,7 @@
         <v-col
                 v-for="(item, i) in items"
                 :key="i"
-                :cols="item.flex"
+                flex="4"
                 class="mt-7 px-3"
         >
           <TabMenu/>
@@ -94,7 +92,6 @@
                   color='grey lighten-4'
                   elevation="15"
                   dark
-                  height="250px"
           >
             <div class="justify-space-between">
               <div>
@@ -107,10 +104,26 @@
                         :color="item.bordercolor"
                 >
                 </v-divider>
-                <v-card-subtitle
-                        class="black--text font-weight-bold mt-2"
-                        v-text="item.text"
-                ></v-card-subtitle>
+                <v-list color="grey lighten-4">
+                    <v-list-item>
+                      <v-list-item-avatar class="mt-1 ml-5">
+                        <v-icon large :color="item.icon01color">{{item.icon01}}</v-icon>
+                      </v-list-item-avatar>
+                      <v-list-item-title v-text="item.text01" class="black--text subtitle-1 font-weight-bold"></v-list-item-title>
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-avatar class="mt-1 ml-5">
+                        <v-icon large :color="item.icon02color">{{item.icon02}}</v-icon>
+                      </v-list-item-avatar>
+                      <v-list-item-title v-text="item.text02" class="black--text subtitle-1 font-weight-bold"></v-list-item-title>
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-avatar class="mt-1 ml-5">
+                        <v-icon large :color="item.icon03color">{{item.icon03}}</v-icon>
+                      </v-list-item-avatar>
+                      <v-list-item-title v-text="item.text03" class="black--text subtitle-1 font-weight-bold"></v-list-item-title>
+                    </v-list-item>
+                </v-list>
               </div>
             </div>
           </v-card>
@@ -128,28 +141,46 @@
     data: () => ({
       items: [
         {
-          flex:'4',
           height: '0',
           bordercolor:'green',
-          color: 'grey lighten-4',
-          title: 'QUALIFICATION',
-          text: 'Ellie Goulding',
+          title:'QUALIFICATION',
+          text01: 'TOEICスコア 640',
+          text02:'宅地建物取引主任者資格',
+          text03:'ITパスポート etc...',
+          icon01:'mdi-numeric-1-box-multiple',
+          icon02:'mdi-city',
+          icon03:'mdi-clipboard-account',
+          icon01color:'green',
+          icon02color:'green',
+          icon03color:'green'
         },
         {
-          flex:'4',
           height: '0',
           bordercolor:'blue',
-          color: 'grey lighten-4',
           title: 'EXPERIENCE',
-          text: 'Ellie Goulding',
+          text01:'設計士アシスタント(学生時代)',
+          text02:'不動産営業(学生インターン)',
+          text03:'フリーランスエージェント(現職)',
+          icon01:'mdi-map',
+          icon02:'mdi-bank',
+          icon03:'mdi-human-child',
+          icon01color:'blue',
+          icon02color:'blue',
+          icon03color:'blue'
         },
         {
-          flex: '4',
           height: '0',
           bordercolor:'purple',
-          color: 'grey lighten-4',
           title: 'HOBBY',
-          text: 'Ellie Goulding',
+          text01:'旅行(温泉&御朱印集め)',
+          text02:'運動(ランニング&筋トレ)',
+          text03:'サービス作り(Web・ゲーム)',
+          icon01:'mdi-beach',
+          icon02:'mdi-run',
+          icon03:'mdi-web',
+          icon01color:'purple',
+          icon02color:'purple',
+          icon03color:'purple'
         }
       ]
     })
