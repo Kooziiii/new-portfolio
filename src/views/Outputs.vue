@@ -12,7 +12,6 @@
                         elevation="15"
                         dark
                         class="mx-auto"
-                        :href="item.link"
                 >
                     <div class="justify-space-between">
                         <div>
@@ -29,15 +28,14 @@
                                     hide-delimiter-background
                                     show-arrows-on-hover
                             >
-                                <v-carousel-item
-                                        v-for="(color, i) in colors"
-                                        :key="i"
-                                >
-                                    <v-sheet
-                                            :color="colors[i]"
-                                            height="100%"
-                                    >
-                                    </v-sheet>
+                                <v-carousel-item>
+                                    <v-img :src="item.image01" height="100%"> </v-img>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-img :src="item.image02" height="100%"> </v-img>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-img :src="item.image03" height="100%"> </v-img>
                                 </v-carousel-item>
                             </v-carousel>
                             <v-card-subtitle
@@ -85,6 +83,9 @@
                         'バー設定まで全ての工程を担当しました。現在もバージョンアップ対応や\n' +
                         '改修を含む、運用・保守を行なっております。',
                     skill:'　HTML/CSS/PHP/WordPress/x-server...',
+                    image01:require('@/assets/corporate01.png'),
+                    image02:require('@/assets/corporate02.png'),
+                    image03:require('@/assets/corporate03.png'),
                     link: 'http://borderless-p.jp/',
                 },
                 {
@@ -94,6 +95,9 @@
                         '設計にしました。CMS等を使用せずに1からWebサイトを作るのが初めてだった為、分からない\n'+
                         'ことも多々ありましたが、なんとか完成させることができました。\n' ,
                     skill:'　JavaScript(Vue.js,Chart.js)/firebase...',
+                    image01:require('@/assets/portfolio01.png'),
+                    image02:require('@/assets/portfolio02.png'),
+                    image03:require('@/assets/portfolio03.png'),
                     link: 'https://sendmail-5a478.web.app',
                 },
                 {
@@ -104,6 +108,9 @@
                         '私の主な担当は企画、画面の設計・実装、外注先折衝などです。\n' +
                         'リリースは2020年7月頃を予定しております。(画像はイメージです。)',
                     skill:'　Unity(C#)/JavaScript/GCP/Github...',
+                    image01:require('@/assets/tanks.png'),
+                    image02:require('@/assets/tanks.png'),
+                    image03:require('@/assets/tanks.png'),
                 }
             ],
         }),
