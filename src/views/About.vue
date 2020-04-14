@@ -13,36 +13,25 @@
                 <v-card-title
                         class="black--text font-weight-black pt-2 pb-2 pl-5"
                 >USER PROFILE</v-card-title>
-                <v-divider
-                        color="red"
-                >
-                </v-divider>
-                <v-list-item class="pl-5">
-                  <v-col cols="6">
-                    <v-list-item-avatar
-                            width="100px"
-                            height="100px"
-                            class="mt-5 ml-3"
-                    >
+                <v-divider color="red"></v-divider>
+                <v-card-actions>
+                  <v-list-item class="grow">
+                    <v-list-item-avatar size="125" class="ml-3 mt-7 mb-6">
                       <v-img
                               class="elevation-6"
                               src="../assets/portfoio.jpg"
                       ></v-img>
-                  </v-list-item-avatar>
-                  </v-col>
-                  <v-col cols="6" class="pl-0 py-0 mt-12 mb-10">
-                    <v-card-text
-                            class="black--text font-weight-bold py-0 caption"
-                    >ニックネーム</v-card-text>
-                    <v-card-text
-                            class="black--text font-weight-bold pt-1 title"
-                    >KoooZiii</v-card-text>
-                    <div class="text-center mt-0">
-                      <v-btn class="mx-1 px-3 body-2" width="30%" href="https://qiita.com/KoooZiiii" >Qiita</v-btn>
-                      <v-btn class="mx-1 px-3 body-2" width="30%" href="https://github.com/Kooziiii">Github</v-btn>
-                    </div>
-                  </v-col>
-                </v-list-item>
+                    </v-list-item-avatar>
+                    <v-list-item-content class="ml-2">
+                      <v-list-item-text class="black--text font-weight-bold py-0 caption">ニックネーム</v-list-item-text>
+                      <v-list-item-text class="black--text font-weight-bold py-0 title">KoooZiii</v-list-item-text>
+                      <v-list-item class="pl-0">
+                        <v-btn class="px-2" href="https://qiita.com/KoooZiiii">Qiita</v-btn>
+                        <v-btn class="ml-2 px-2" href="https://github.com/Kooziiii">Github</v-btn>
+                      </v-list-item>
+                    </v-list-item-content>
+                  </v-list-item>
+                </v-card-actions>
               </div>
             </div>
           </v-card>
@@ -70,10 +59,10 @@
                         class="black--text font-weight-bold mt-2"
                 >こんにちは。KoooZiiiと申します。本ページをご覧頂きありがとうございます。
                   信州大学経済学部を卒業後、ベンチャー企業にてフリーランスエンジニアへの
-                  案件紹介エージェントとして勤務し、現在は前職の上司とともに、
+                  案件紹介エージェントを経て、現在は前職の上司とともに、
                   同業種での会社の立ち上げを行っております。 仕事柄、エンジニアの方と
                   触れ合うことが多く、その中で「自分の手でサービスを作れるようになりたい」
-                  という想いが強くなり、改めてエンジニアを志すようになりました。
+                  という想いが強くなり、エンジニアを志すようになりました。
                   もともと大学時代からプログラミングの学習を継続しており、 3ヶ月間
                   プログラミングスクールにも通っておりましたので、プログラミングの基礎の基礎の基礎は
                   理解できていると思います。 まだまだ駆け出しの身ではありますが、どうぞよろしくお願い致します！</v-card-subtitle>
