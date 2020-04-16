@@ -5,7 +5,7 @@
                     v-for="(item, i) in items"
                     :key="i"
                     cols="4"
-                    class="pt-10 mt-12 px-3"
+                    class="pt-10 px-3"
             >
                 <v-card
                         :color="item.color"
@@ -49,15 +49,23 @@
                             </v-divider>
                             <v-card-text
                                     class="black--text font-weight-bold pb-1 pt-3"
-                            >・言語/FW/TOOL
+                            >・言語/FW/TOOL：
                             </v-card-text>
                             <v-card-text
                                     class="black--text font-weight-bold pb-2 pt-1"
                                     v-text="item.skill"
                             >
                             </v-card-text>
+                            <v-card-text
+                                    class="black--text font-weight-bold pb-1 pt-3"
+                            >・制作期間：
+                            </v-card-text>
+                            <v-card-text
+                                    class="black--text font-weight-bold pb-2 pt-1"
+                                    v-text="item.period"
+                            >
+                            </v-card-text>
                         </div>
-
                     </div>
                 </v-card>
             </v-col>
@@ -87,6 +95,7 @@
                     image02:require('@/assets/corporate02.png'),
                     image03:require('@/assets/corporate03.png'),
                     link: 'http://borderless-p.jp/',
+                    period:'　約1週間(20時間程度)'
                 },
                 {
                     color: 'grey lighten-4',
@@ -99,18 +108,20 @@
                     image02:require('@/assets/portfolio02.png'),
                     image03:require('@/assets/portfolio03.png'),
                     link: 'https://sendmail-5a478.web.app',
+                    period:'　約2週間(40時間程度)'
                 },
                 {
                     color: 'grey lighten-4',
                     title: '【製作中】スマホカジュアルゲーム',
                     subtitle:'友人のゲームエンジニアとカジュアル\n' +
-                        'ゲームを製作しております。IOS、Androidともに対応しております。\n' +
+                        'ゲームを製作しております。IOS、Androidともに対応予定です。\n' +
                         '私の主な担当は企画、画面の設計・実装、外注先折衝などです。\n' +
                         'リリースは2020年7月頃を予定しております。(画像はイメージです。)',
                     skill:'　Unity(C#)/JavaScript/GCP/Github...',
                     image01:require('@/assets/tanks.png'),
                     image02:require('@/assets/tanks.png'),
                     image03:require('@/assets/tanks.png'),
+                    period:'　約3ヶ月(200時間程度)見込み'
                 }
             ],
         }),

@@ -1,7 +1,7 @@
 <template>
-    <v-container>
+    <v-container class="justify-center">
       <v-row dense>
-        <v-col class="mt-7 px-3" cols="4">
+        <v-col class="mt-0 px-3" lg="4" sm="12" md="4">
           <TabMenu/>
           <v-card
                   color='grey lighten-4'
@@ -12,7 +12,7 @@
               <div>
                 <v-card-title
                         class="black--text font-weight-black pt-2 pb-2 pl-5"
-                >USER PROFILE</v-card-title>
+                >PROFILE</v-card-title>
                 <v-divider color="red"></v-divider>
                 <v-card-actions>
                   <v-list-item class="grow">
@@ -37,7 +37,7 @@
           </v-card>
         </v-col>
         <v-col
-                cols="8"
+                lg="8" sm="12" md="12"
                 class="mt-7 px-3"
         >
           <TabMenu/>
@@ -73,7 +73,7 @@
         <v-col
                 v-for="(item, i) in items"
                 :key="i"
-                flex="4"
+                lg="4" sm="12" md="12"
                 class="mt-7 px-3"
         >
           <TabMenu/>
@@ -175,7 +175,11 @@
     })
   }
 </script>
-<style>
+<style scoped>
+
+  .justify-center{
+    padding: 0;
+  }
   .text-center{
     display: flex;
   }
