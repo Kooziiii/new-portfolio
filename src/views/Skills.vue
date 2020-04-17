@@ -25,7 +25,7 @@
         </v-item-group>
 
         <v-col class="mt-12">
-            <v-window v-model="window" class="elevation-15" vertical>
+            <v-window v-model="window" class="elevation-15" vertical >
                 <!-- windowごとのchartの切り替えの方法が分からなかった為、3回記述を繰り返しています-->
                 <v-window-item>
                     <v-card height="500px" class="justify-center font-weight-bold pt-12 px-12">

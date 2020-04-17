@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <v-layout wrap>
+
         <v-navigation-drawer
                 v-model="drawer"
                 class="ml-0 pt-0"
@@ -40,7 +40,6 @@
             </v-btn>
             </v-toolbar-items>
         </v-app-bar>
-        </v-layout>
     </nav>
 </template>
 

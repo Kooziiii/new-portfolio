@@ -1,7 +1,7 @@
 <template>
     <v-container class="justify-center">
       <v-row dense>
-        <v-col class="mt-0 px-3" lg="4" sm="12" md="4">
+        <v-col class="mt-5 px-3" lg="4" sm="12" md="12">
           <TabMenu/>
           <v-card
                   color='grey lighten-4'
@@ -16,8 +16,9 @@
                 <v-divider color="red"></v-divider>
                 <v-card-actions>
                   <v-list-item class="grow">
-                    <v-list-item-avatar size="125" class="ml-3 mt-7 mb-6">
+                    <v-list-item-avatar width="8vw" height="8vw" min-width="60px" min-height="60px" class="ml-3 mt-7 mb-6">
                       <v-img
+                              height="100%"
                               class="elevation-6"
                               src="../assets/portfoio.jpg"
                       ></v-img>
@@ -26,7 +27,7 @@
                       <v-list-item-text class="black--text font-weight-bold py-0 caption">ニックネーム</v-list-item-text>
                       <v-list-item-text class="black--text font-weight-bold py-0 title">KoooZiii</v-list-item-text>
                       <v-list-item class="pl-0">
-                        <v-btn class="px-2" href="https://qiita.com/KoooZiiii">Qiita</v-btn>
+                        <v-btn class="px-2"  max-width="10px" href="https://qiita.com/KoooZiiii">Qiita</v-btn>
                         <v-btn class="ml-2 px-2" href="https://github.com/Kooziiii">Github</v-btn>
                       </v-list-item>
                     </v-list-item-content>
@@ -38,7 +39,7 @@
         </v-col>
         <v-col
                 lg="8" sm="12" md="12"
-                class="mt-7 px-3"
+                class="mt-5 px-3"
         >
           <TabMenu/>
           <v-card
@@ -57,6 +58,7 @@
                 </v-divider>
                 <v-card-subtitle
                         class="black--text font-weight-bold mt-2"
+                        size="10"
                 >こんにちは。KoooZiiiと申します。本ページをご覧頂きありがとうございます。
                   信州大学経済学部を卒業後、ベンチャー企業にてフリーランスエンジニアへの
                   案件紹介エージェントを経て、現在は前職の上司とともに、
@@ -74,7 +76,7 @@
                 v-for="(item, i) in items"
                 :key="i"
                 lg="4" sm="12" md="12"
-                class="mt-7 px-3"
+                class="mt-5 px-3"
         >
           <TabMenu/>
           <v-card

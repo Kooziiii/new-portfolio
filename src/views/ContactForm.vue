@@ -7,8 +7,8 @@
         >
             <v-card
                     elevation="15"
-                    width="80%"
-                    class="mt-12 pt-0 pb-5 px-10">
+                    width="90%"
+                    class="pt-0 pb-5 px-10">
                 <v-container>
                     <v-spacer></v-spacer>
                     <v-layout
