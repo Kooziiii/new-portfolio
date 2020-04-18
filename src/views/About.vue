@@ -1,8 +1,8 @@
 <template>
     <v-container>
-      <v-content width="100%" height="500px"></v-content>
+      <v-content></v-content>
       <v-row dense>
-        <v-col class="mt-3 px-3" lg="4" sm="12" md="12">
+        <v-col class="px-3" lg="4" sm="12" md="12">
           <v-card
                   color='grey lighten-4'
                   elevation="15"
@@ -39,7 +39,7 @@
         </v-col>
         <v-col
                 lg="8" sm="12" md="12"
-                class="mt-3 px-3"
+                class="px-3"
         >
           <TabMenu/>
           <v-card
@@ -178,5 +178,7 @@
   }
 </script>
 <style scoped>
-
+  main .v-content{
+    padding: 0;
+  }
 </style>

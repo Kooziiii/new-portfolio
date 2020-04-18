@@ -1,12 +1,11 @@
 <template>
     <v-app>
         <TabMenu/>
-        <v-spacer ></v-spacer>
+        <v-spacer></v-spacer>
             <v-layout>
                 <router-view></router-view>
             </v-layout>
-        <v-footer>
-        </v-footer>
+
     </v-app>
 </template>
 

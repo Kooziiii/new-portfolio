@@ -1,7 +1,6 @@
 <template>
-    <v-container>
-        <v-content width="100%" height="300px"></v-content>
-        <v-row dense justify="center">
+    <v-container class="mt-12">
+        <v-row dense justify="center" class="mt-12">
             <v-col
                     v-for="(item, i) in items"
                     :key="i"

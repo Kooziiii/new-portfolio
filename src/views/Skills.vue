@@ -1,30 +1,18 @@
 <template>
-    <v-container><v-content width="100%" height="300px"></v-content>
+    <v-container class="mt-12">
+        <v-content></v-content>
     <v-row dense justify="center" align-content="center" align="center">
-        <v-item-group
-                v-model="window"
-                class="mr-6"
-                mandatory
-        >
-            <v-item
-                    v-for="(n ,key) in length"
-                    v-slot:default="{active, toggle}"
-                    :key="key"
-            >
+        <v-item-group v-model="window" class="mt-12 mr-6" mandatory>
+            <v-item v-for="(n ,key) in length" v-slot:default="{active, toggle}" :key="key">
                 <div>
-                    <v-btn
-                            v-on:click="toggle_switch()"
-                            :input-value="active"
-                            icon
-                            @click="toggle"
-                    >
+                    <v-btn v-on:click="toggle_switch()" :input-value="active" icon @click="toggle">
                         <v-icon>mdi-record</v-icon>
                     </v-btn>
                 </div>
             </v-item>
         </v-item-group>
 
-        <v-col>
+        <v-col class="mt-3">
             <v-window v-model="window" class="elevation-15" vertical >
                 <!-- windowごとのchartの切り替えの方法が分からなかった為、3回記述を繰り返し-->
                 <v-window-item>
@@ -131,7 +119,7 @@
         ),
     }
 </script>
-<style>
+<style scoped>
     .v-content{
         width:80%;
         margin-left:10%;

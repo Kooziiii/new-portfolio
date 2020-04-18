@@ -1,9 +1,8 @@
-
 <template>
         <v-container>
-            <v-content width="100%" height="230px"></v-content>
-            <v-row dense justify="center" width="100%">
-                <v-col>
+            <v-content class="mt-5"></v-content>
+            <v-row dense justify="center" width="100%" class="mt-12">
+                <v-col class="mt-5">
                     <v-card
                             elevation="15"
                             class="pt-0 pb-5 px-10">
@@ -126,5 +125,7 @@
     }
 </script>
 <style scoped>
-
+    main{
+        padding: 96px 0 0;
+    }
 </style>
