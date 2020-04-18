@@ -1,10 +1,10 @@
 <template>
     <v-app>
         <TabMenu/>
-        <v-spacer width="100%" height="200px"></v-spacer>
-        <v-content class="justify-center mt-12">
-            <router-view></router-view>
-        </v-content>
+        <v-spacer ></v-spacer>
+            <v-layout>
+                <router-view></router-view>
+            </v-layout>
         <v-footer>
         </v-footer>
     </v-app>

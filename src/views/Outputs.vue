@@ -1,11 +1,12 @@
 <template>
-    <v-container class="mt-10">
-        <v-row dense>
+    <v-container>
+        <v-content width="100%" height="300px"></v-content>
+        <v-row dense justify="center">
             <v-col
                     v-for="(item, i) in items"
                     :key="i"
-                    cols="4"
                     class="px-3"
+                    lg="4" sm="12" md="12"
             >
                 <v-card
                         :color="item.color"

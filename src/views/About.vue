@@ -1,8 +1,8 @@
 <template>
-    <v-container class="justify-center">
+    <v-container>
+      <v-content width="100%" height="500px"></v-content>
       <v-row dense>
-        <v-col class="mt-5 px-3" lg="4" sm="12" md="12">
-          <TabMenu/>
+        <v-col class="mt-3 px-3" lg="4" sm="12" md="12">
           <v-card
                   color='grey lighten-4'
                   elevation="15"
@@ -16,7 +16,7 @@
                 <v-divider color="red"></v-divider>
                 <v-card-actions>
                   <v-list-item class="grow">
-                    <v-list-item-avatar width="8vw" height="8vw" min-width="60px" min-height="60px" class="ml-3 mt-7 mb-6">
+                    <v-list-item-avatar width="8vw" height="8vw" min-width="60px" min-height="60px" class="ml-3 my-8">
                       <v-img
                               height="100%"
                               class="elevation-6"
@@ -39,7 +39,7 @@
         </v-col>
         <v-col
                 lg="8" sm="12" md="12"
-                class="mt-5 px-3"
+                class="mt-3 px-3"
         >
           <TabMenu/>
           <v-card
@@ -76,7 +76,7 @@
                 v-for="(item, i) in items"
                 :key="i"
                 lg="4" sm="12" md="12"
-                class="mt-5 px-3"
+                class="mt-3 px-3"
         >
           <TabMenu/>
           <v-card
@@ -179,10 +179,4 @@
 </script>
 <style scoped>
 
-  .justify-center{
-    padding: 0;
-  }
-  .text-center{
-    display: flex;
-  }
 </style>

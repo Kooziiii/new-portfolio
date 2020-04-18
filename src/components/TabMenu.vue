@@ -1,9 +1,7 @@
 <template>
     <nav>
-
         <v-navigation-drawer
                 v-model="drawer"
-                class="ml-0 pt-0"
                 absolute
                 temporary
                 width="100%">
@@ -14,22 +12,20 @@
                     class="font-weight-bold"
                     x-large
                     v-for="link in links" :key="link.text"
-                    router :to="link.route">
-                <v-icon left>{{link.icon}}</v-icon> {{link.text}}
-            </v-btn>
+                    router :to="link.route">{{link.text}}</v-btn>
         </v-navigation-drawer>
-        <v-app-bar flat app class="mt-7 mx-10" color="white">
-            <v-toolbar-title >
+        <v-app-bar app extended color="white" extension-height="40">
+            <v-toolbar-title class="mt-10">
                 <span class="display-2 font-weight-bold">KoooZiii's</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items
                     @click.stop="drawer = !drawer"
-                    class="hidden-md-and-up"
-            ><v-btn color="white" elevation="0"><v-icon large>mdi-menu</v-icon></v-btn>
+                    class="hidden-md-and-up mt-10"
+            ><v-btn color="white" elevation="0"><v-icon x-large>mdi-menu</v-icon></v-btn>
             </v-toolbar-items>
 
-            <v-toolbar-items class="hidden-sm-and-down">
+            <v-toolbar-items class="hidden-sm-and-down mt-10">
                 <v-btn
                         class="mx-2 mt-1
                         font-weight-bold"
@@ -62,7 +58,5 @@
 </script>
 
 <style scoped>
-    .v-content{
-        padding-top: 0;
-    }
+
 </style>

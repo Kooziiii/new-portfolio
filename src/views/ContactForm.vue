@@ -1,20 +1,18 @@
 
 <template>
-    <div>
-        <v-layout
-                justify-center
-                class="mt-12"
-        >
-            <v-card
-                    elevation="15"
-                    width="90%"
-                    class="pt-0 pb-5 px-10">
-                <v-container>
+        <v-container>
+            <v-content width="100%" height="230px"></v-content>
+            <v-row dense justify="center" width="100%">
+                <v-col>
+                    <v-card
+                            elevation="15"
+                            class="pt-0 pb-5 px-10">
                     <v-spacer></v-spacer>
                     <v-layout
                         class="display-1 pt-9"
                         justify-center
-                        font-weight-bold >お問い合わせ
+                        font-weight-bold
+                    >お問い合わせ
                     </v-layout>
                     <v-layout
                         class="title pa-3"
@@ -51,8 +49,7 @@
                         >送信
                         </v-btn>
                     </v-form>
-                </v-container>
-            </v-card>
+                </v-card>
             <v-snackbar
                 v-model="snackBar.show"
                 :color="snackBar.color"
@@ -63,8 +60,9 @@
             >
                 {{snackBar.message}}
             </v-snackbar>
-        </v-layout>
-    </div>
+                </v-col>
+            </v-row>
+        </v-container>
 </template>
 
 <script>
