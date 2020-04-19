@@ -21,10 +21,9 @@
             <v-spacer></v-spacer>
             <v-toolbar-items
                     @click.stop="drawer = !drawer"
-                    class="hidden-md-and-up mt-10"
-            ><v-btn color="white" elevation="0"><v-icon x-large>mdi-menu</v-icon></v-btn>
+                    class="hidden-md-and-up mt-10">
+                <v-btn color="white" elevation="0"><v-icon x-large>mdi-menu</v-icon></v-btn>
             </v-toolbar-items>
-
             <v-toolbar-items class="hidden-sm-and-down mt-10">
                 <v-btn
                         class="mx-2 mt-1
@@ -32,13 +31,11 @@
                         x-large
                         v-for="link in links" :key="link.text"
                         router :to="link.route">
-                        <v-icon left>{{link.icon}}</v-icon> {{link.text}}
-            </v-btn>
+                        <v-icon left>{{link.icon}}</v-icon> {{link.text}}</v-btn>
             </v-toolbar-items>
         </v-app-bar>
     </nav>
 </template>
-
 <script>
     export default {
         name: "TabMenu",
@@ -53,10 +50,6 @@
                 ]
             }
         }
-
     }
 </script>
 
-<style scoped>
-
-</style>

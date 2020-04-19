@@ -2,10 +2,9 @@
     <v-app>
         <TabMenu/>
         <v-spacer></v-spacer>
-            <v-layout>
-                <router-view></router-view>
-            </v-layout>
-
+        <v-layout>
+            <router-view></router-view>
+        </v-layout>
     </v-app>
 </template>
 
@@ -14,17 +13,6 @@
 
     export default {
         name: 'App',
-        components: {
-            TabMenu
-        },
-        data () {
-            return {
-                //
-            }
-        }
-    }
+        components: {TabMenu},
+        data () {return {}}}
 </script>
-
-<style scoped>
-</style>
-

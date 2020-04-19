@@ -1,50 +1,44 @@
 <template>
     <v-container class="mt-12">
         <v-content></v-content>
-    <v-row dense justify="center" align-content="center" align="center">
-        <v-item-group v-model="window" class="mt-12 mr-6" mandatory>
-            <v-item v-for="(n ,key) in length" v-slot:default="{active, toggle}" :key="key">
-                <div>
-                    <v-btn v-on:click="toggle_switch()" :input-value="active" icon @click="toggle">
-                        <v-icon>mdi-record</v-icon>
-                    </v-btn>
-                </div>
-            </v-item>
-        </v-item-group>
-
+        <v-row dense justify="center" align-content="center" align="center">
+            <v-item-group v-model="window" class="mt-12 mr-6" mandatory>
+                <v-item v-for="(n ,key) in length" v-slot:default="{active, toggle}" :key="key">
+                    <div>
+                        <v-btn v-on:click="toggle_switch()" :input-value="active" icon @click="toggle">
+                            <v-icon>mdi-record</v-icon>
+                        </v-btn>
+                    </div>
+                </v-item>
+            </v-item-group>
         <v-col class="mt-3">
-            <v-window v-model="window" class="elevation-15" vertical >
+            <v-window v-model="window" class="elevation-15" vertical>
                 <!-- windowごとのchartの切り替えの方法が分からなかった為、3回記述を繰り返し-->
                 <v-window-item>
                     <v-card class="justify-center font-weight-bold pt-12 px-3">
                         <v-container>
-                        <v-row>
-                        <v-col class="" lg="6" sm="12" md="12">
-                            <chart></chart>
-                        </v-col>
-                        <v-col class="" lg="6" sm="12" md="12">
-                            <v-card-title class="justify-center font-weight-bold">フロントエンド
-                            </v-card-title>
-                            <v-card-text class="font-weight-bold">
-                                フロントエンド周りの経験のある技術になります。
-                                目に見える箇所を作ることがモチベーションが上がるので
-                                フロント側の方が好きです。
-                            </v-card-text>
-                            <v-list>
-                                <v-list-item-content class="py-0 pl-5">======================</v-list-item-content>
-                                <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">HTML/CSS: WebサイトやLPの制作経験有り。レスポンシブ対応可能です。</v-list-item-content>
-                                <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">JavaScript : 要素に動きをつけるのに使用している程度です。</v-list-item-content>
-                                <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">jQuery     : JavaScriptと同じくらいです。</v-list-item-content>
-                                <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">Vue.js     : 本サイトを使用するのに使用。componentの理解はOKです。</v-list-item-content>
-                                <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">WordPress :コーポレートサイトの制作〜運用までの経験あり。</v-list-item-content>
-                                <v-list-item-content class="py-0 pl-5">======================</v-list-item-content>
-                            </v-list>
-                            <v-card-text
-                                    class="py-0 font-weight-bold"
-                            >※なお現場での経験はありません。私の主観による評価になります。</v-card-text>
-                            <v-card-text class="font-weight-bold">チャートの見方：①基本的な構文の理解 ②数ヶ月学んだ ③ものを作ったことがある ④1人称で動ける(つもり) ⑤他人に説明ができる</v-card-text>
-                        </v-col>
-                        </v-row>
+                            <v-row>
+                                <v-col class="" lg="6" sm="12" md="12">
+                                    <chart></chart>
+                                </v-col>
+                                <v-col class="" lg="6" sm="12" md="12">
+                                    <v-card-title class="justify-center font-weight-bold">フロントエンド</v-card-title>
+                                    <v-card-text class="font-weight-bold">
+                                        フロントエンド周りの経験のある技術になります。
+                                        目に見える箇所を作ることがモチベーションが上がるのでフロント側の方が好きです。</v-card-text>
+                                    <v-list>
+                                        <v-list-item-content class="py-0 pl-5">======================</v-list-item-content>
+                                        <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">HTML/CSS: WebサイトやLPの制作経験有り。レスポンシブ対応可能です。</v-list-item-content>
+                                        <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">JavaScript : 要素に動きをつけるのに使用している程度です。</v-list-item-content>
+                                        <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">jQuery     : JavaScriptと同じくらいです。</v-list-item-content>
+                                        <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">Vue.js     : 本サイトを使用するのに使用。componentの理解はOKです。</v-list-item-content>
+                                        <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">WordPress :コーポレートサイトの制作〜運用までの経験あり。</v-list-item-content>
+                                        <v-list-item-content class="py-0 pl-5">======================</v-list-item-content>
+                                    </v-list>
+                                    <v-card-text class="py-0 font-weight-bold">※なお現場での経験はありません。私の主観による評価になります。</v-card-text>
+                                    <v-card-text class="font-weight-bold">チャートの見方：①基本的な構文の理解 ②数ヶ月学んだ ③ものを作ったことがある ④1人称で動ける(つもり) ⑤他人に説明ができる</v-card-text>
+                                </v-col>
+                            </v-row>
                         </v-container>
                     </v-card>
                 </v-window-item>
@@ -53,13 +47,10 @@
                         <v-row dense>
                             <v-col lg="6" sm="12" md="12"><chart02></chart02></v-col>
                             <v-col lg="6" sm="12" md="12">
-                                <v-card-title class="justify-center font-weight-bold">サーバーサイド
-                                </v-card-title>
+                                <v-card-title class="justify-center font-weight-bold">サーバーサイド</v-card-title>
                                 <v-card-text class="font-weight-bold">
-                                    サーバーサイド周りの経験のある技術になります。
-                                    フロント側に比べて知見が少ないですが、広く浅く経験し、
-                                    知見を深めているところです。
-                                </v-card-text>
+                                    サーバーサイド周りの経験のある技術になります。 フロント側に比べて知見が少ないですが、
+                                    広く浅く経験しながら、 知見を深めているところです。</v-card-text>
                                 <v-list>
                                     <v-list-item-content class="py-0 pl-5">======================</v-list-item-content>
                                     <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">Ruby(Rails) : プログラミングスクールにて学習経験があります。</v-list-item-content>
@@ -69,9 +60,7 @@
                                     <v-list-item-content class="body-2 py-0 pl-5 font-weight-bold">MySQL  :プログラミングスクールにて経験があります。</v-list-item-content>
                                     <v-list-item-content class="py-0 pl-5">======================</v-list-item-content>
                                 </v-list>
-                                <v-card-text
-                                        class="py-0 font-weight-bold"
-                                >※なお現場での経験はありません。私の主観による評価になります。</v-card-text>
+                                <v-card-text class="py-0 font-weight-bold">※なお現場での経験はありません。私の主観による評価になります。</v-card-text>
                                 <v-card-text class="font-weight-bold">チャートの見方：①基本的な構文の理解 ②数ヶ月学んだ ③ものを作ったことがある ④1人称で動ける(つもり) ⑤他人に説明ができる</v-card-text>
                             </v-col>
                         </v-row>
@@ -123,12 +112,3 @@
         ),
     }
 </script>
-<style scoped>
-    .v-content{
-        width:80%;
-        margin-left:10%;
-    }
-    canvas .chartjs-render-monitor{
-        height: 200px;
-    }
-</style>
