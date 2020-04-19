@@ -3,31 +3,21 @@
       <v-content></v-content>
       <v-row dense>
         <v-col class="px-3" lg="4" sm="12" md="12">
-          <v-card
-                  color='grey lighten-4'
-                  elevation="15"
-                  dark
-          >
+          <v-card color='grey lighten-4' elevation="15" dark>
             <div class="justify-space-between">
               <div>
-                <v-card-title
-                        class="black--text font-weight-black pt-2 pb-2 pl-5"
-                >PROFILE</v-card-title>
+                <v-card-title class="black--text font-weight-black pt-2 pb-2 pl-5">PROFILE</v-card-title>
                 <v-divider color="red"></v-divider>
                 <v-card-actions>
                   <v-list-item class="grow">
                     <v-list-item-avatar width="8vw" height="8vw" min-width="60px" min-height="60px" class="ml-3 my-8">
-                      <v-img
-                              height="100%"
-                              class="elevation-6"
-                              src="../assets/portfoio.jpg"
-                      ></v-img>
+                      <v-img height="100%" class="elevation-6" src="../assets/portfoio.jpg"></v-img>
                     </v-list-item-avatar>
                     <v-list-item-content class="ml-2">
                       <v-list-item-text class="black--text font-weight-bold py-0 caption">ニックネーム</v-list-item-text>
                       <v-list-item-text class="black--text font-weight-bold py-0 title">KoooZiii</v-list-item-text>
                       <v-list-item class="pl-0">
-                        <v-btn class="px-2"  max-width="10px" href="https://qiita.com/KoooZiiii">Qiita</v-btn>
+                        <v-btn class="px-2" href="https://qiita.com/KoooZiiii">Qiita</v-btn>
                         <v-btn class="ml-2 px-2" href="https://github.com/Kooziiii">Github</v-btn>
                       </v-list-item>
                     </v-list-item-content>
