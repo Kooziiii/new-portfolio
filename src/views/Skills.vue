@@ -1,8 +1,8 @@
 <template>
-    <v-container class="mt-12">
+    <v-container>
         <v-content></v-content>
         <v-row dense justify="center" align-content="center" align="center">
-            <v-item-group v-model="window" class="mt-12 mr-6" mandatory>
+            <v-item-group v-model="window" class="mr-6" mandatory>
                 <v-item v-for="(n ,key) in length" v-slot:default="{active, toggle}" :key="key">
                     <div>
                         <v-btn v-on:click="toggle_switch()" :input-value="active" icon @click="toggle">
@@ -15,15 +15,15 @@
             <v-window v-model="window" class="elevation-15" vertical>
                 <!-- windowごとのchartの切り替えの方法が分からなかった為、3回記述を繰り返し-->
                 <v-window-item>
-                    <v-card class="justify-center font-weight-bold pt-12 px-3">
+                    <v-card class="justify-center font-weight-bold pt-5 px-3">
                         <v-container>
-                            <v-row>
+                            <v-row align-content="center" align="center">
                                 <v-col class="" lg="6" sm="12" md="12">
-                                    <chart></chart>
+                                        <chart width="400%" height="250%" responsive></chart>
                                 </v-col>
-                                <v-col class="" lg="6" sm="12" md="12">
-                                    <v-card-title class="justify-center font-weight-bold">フロントエンド</v-card-title>
-                                    <v-card-text class="font-weight-bold">
+                                <v-col class="pt-0" lg="6" sm="12" md="12">
+                                    <v-card-title class="justify-center font-weight-bold pt-0">フロントエンド</v-card-title>
+                                    <v-card-text class="font-weight-bold pb-0">
                                         フロントエンド周りの経験のある技術になります。
                                         目に見える箇所を作ることがモチベーションが上がるのでフロント側の方が好きです。</v-card-text>
                                     <v-list>
@@ -44,11 +44,13 @@
                 </v-window-item>
                 <v-window-item>
                     <v-card class="justify-center pt-12 px-3">
-                        <v-row dense>
-                            <v-col lg="6" sm="12" md="12"><chart02></chart02></v-col>
+                        <v-row dense align-content="center" align="center">
                             <v-col lg="6" sm="12" md="12">
-                                <v-card-title class="justify-center font-weight-bold">サーバーサイド</v-card-title>
-                                <v-card-text class="font-weight-bold">
+                                <chart02 width="400%" height="250%" responsive></chart02>
+                            </v-col>
+                            <v-col class="pt-0" lg="6" sm="12" md="12">
+                                <v-card-title class="justify-center font-weight-bold pt-0">サーバーサイド</v-card-title>
+                                <v-card-text class="font-weight-bold pb-0">
                                     サーバーサイド周りの経験のある技術になります。 フロント側に比べて知見が少ないですが、
                                     広く浅く経験しながら、 知見を深めているところです。</v-card-text>
                                 <v-list>
@@ -68,11 +70,13 @@
                 </v-window-item>
                 <v-window-item>
                     <v-card class="justify-center font-weight-bold pt-12 px-3">
-                        <v-row>
-                            <v-col lg="6" sm="12" md="12"><chart03></chart03></v-col>
+                        <v-row align-content="center" align="center">
                             <v-col lg="6" sm="12" md="12">
-                                <v-card-title class="justify-center font-weight-bold">その他</v-card-title>
-                                <v-card-text class="font-weight-bold">
+                                <chart03 width="400%" height="250%" responsive></chart03>
+                            </v-col>
+                            <v-col class="pt-0" lg="6" sm="12" md="12">
+                                <v-card-title class="justify-center font-weight-bold pt-0">その他</v-card-title>
+                                <v-card-text class="font-weight-bold pb-0">
                                     フロント・サーバー以外(?)の経験のある技術になります。
                                     "仲間とのサービス開発や、一時の気の迷いで触った技術をまとめました。
                                 </v-card-text>

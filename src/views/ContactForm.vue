@@ -2,7 +2,7 @@
     <v-container>
         <v-content></v-content>
         <v-row dense justify="center" width="100%">
-            <v-col class="mt-5">
+            <v-col>
                 <v-card elevation="15" class="pt-0 pb-5 px-10">
                     <v-spacer></v-spacer>
                     <v-layout class="display-1 pt-9" justify-center font-weight-bold>お問い合わせ</v-layout>
