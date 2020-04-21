@@ -1,5 +1,6 @@
 <template>
     <v-container>
+        <!-- ここの処理を簡単にしていく-->
         <v-content></v-content>
         <v-row dense justify="center" width="100%">
             <v-col>
