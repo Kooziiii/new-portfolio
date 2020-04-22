@@ -18,6 +18,9 @@
                                     <v-list-item class="pl-0">
                                         <v-btn class="px-2" href="https://qiita.com/KoooZiiii">Qiita</v-btn>
                                         <v-btn class="ml-2 px-2" href="https://github.com/Kooziiii">Github</v-btn>
+
+                                        <!-- TODO paizaボタンを追加する-->
+                                        
                                     </v-list-item>
                                 </v-list-item-content>
                             </v-list-item>

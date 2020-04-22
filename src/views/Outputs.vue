@@ -33,15 +33,13 @@
                 'pink darken-2',
                 'red lighten-1'
             ],
-
             items: [
                 {
                     color: 'grey lighten-4',
                     title: '【運営中】コーポレートサイト',
                     subtitle:'wordpressを使用し、レスポンシブ対応のWebサイトを制作しました。\n' +
-                        'WordPressの構築からドメインの取得・レンタルサー\n' +
-                        'バー設定まで全ての工程を担当しました。現在もバージョンアップ対応や\n' +
-                        '改修を含む、運用・保守を行なっております。',
+                        'WordPressの構築からドメインの取得・レンタルサーバー設定まで全ての工程を担当しました。\n' +
+                        '現在もバージョンアップ対応、改修を含む、運用・保守を行なっております。',
                     skill:'　HTML/CSS/PHP/WordPress/x-server...',
                     image01:require('@/assets/corporate01.png'),
                     image02:require('@/assets/corporate02.png'),
