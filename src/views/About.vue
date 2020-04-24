@@ -7,6 +7,7 @@
                     <div class="justify-space-between">
                         <v-card-title class="black--text font-weight-black pt-2 pb-2 pl-5">PROFILE</v-card-title>
                         <v-divider color="red"></v-divider>
+                        <!--TODO 修正箇所 繰り返し処理の記述を修正-->
                         <v-card-actions>
                             <v-list-item class="grow">
                                 <v-list-item-avatar width="8vw" height="8vw" min-width="60px" min-height="60px" class="ml-3 my-8">
@@ -20,7 +21,7 @@
                                         <v-btn class="ml-2 px-2" href="https://github.com/Kooziiii">Github</v-btn>
 
                                         <!-- TODO paizaボタンを追加する-->
-                                        
+
                                     </v-list-item>
                                 </v-list-item-content>
                             </v-list-item>
