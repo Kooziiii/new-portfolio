@@ -14,9 +14,11 @@
                     v-for="link in links" :key="link.text"
                     router :to="link.route">{{link.text}}</v-btn>
         </v-navigation-drawer>
-        <v-app-bar app extended color="white" extension-height="10">
+        <v-app-bar app extended color="white" extension-height="14">
             <v-toolbar-title class="mt-3">
-                <span class="ml-3 display-1 font-weight-bold">KoooZiii's</span>
+                <v-tab color="transparent" :ripple="false" height="100%" width="100%" router to='/'>
+                    <v-img width="15vw" min-width="150px" src="../assets/KoooZiii's-logo.png"></v-img>
+                </v-tab>
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items
@@ -25,13 +27,16 @@
                 <v-btn color="white" elevation="0"><v-icon x-large>mdi-menu</v-icon></v-btn>
             </v-toolbar-items>
             <v-toolbar-items class="hidden-sm-and-down">
-                <v-btn
-                        class="mx-2
+                <v-tab
+                        retain-focus-on-click="true"
+                        color="white"
+                        class="mt-4
                         font-weight-bold"
+                        elevation="0"
                         large
-                        v-for="link in links" :key="link.text"
-                        router :to="link.route">
-                        <v-icon left>{{link.icon}}</v-icon> {{link.text}}</v-btn>
+                        :ripple="{ center: true }"
+                        v-for="link in links" :key="link.text" router :to="link.route">
+                        <v-icon left>{{link.icon}}</v-icon> {{link.text}}</v-tab>
             </v-toolbar-items>
         </v-app-bar>
     </nav>
@@ -43,7 +48,7 @@
             return {
                 drawer: null,
                 links:[
-                    {icon:"mdi-account-box",text: 'aboutme',route: '/'},
+                    {icon:"mdi-account-box",text: 'aboutme',route: '/about'},
                     {icon:"mdi-chart-bar",text: 'outputs',route:'/outputs'},
                     {icon:"mdi-clipboard-text",text: 'skills',route:'/skills'},
                     {icon: "mdi-message-text",text: 'contact',route:'/contact'}
