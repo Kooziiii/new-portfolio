@@ -8,8 +8,8 @@
 
             </v-col>
             <v-col lg="4" sm="4" md="4" class="px-7 mt-12" align-self="center" order-md="1">
-                <div class="title font-weight-bold text-justify text-center">
-                    私のWebサイトをご覧頂き、 誠にありがとうございます。
+                <div class="title font-weight-bold text-justify text-center text--black text--secondary">
+                    私のポートフォリオサイトへお越し頂き、 誠にありがとうございます。
                     何かお困りごとがありましたらお気軽にお声掛けくださいませ。</div>
                 <v-btn
                         router to='/contact'

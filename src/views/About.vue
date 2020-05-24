@@ -1,4 +1,99 @@
 <template>
+    <v-content>
+        <v-content></v-content>
+        <v-row>
+            <v-col cols="12">
+                <div class=" font-italic text--black text--secondary display-2 text-center font-weight-bold mb-5"> Introduce</div>
+            </v-col>
+        </v-row>
+            <v-container>
+                <v-row>
+                    <v-col lg="5" md="5" sm="12" class="justify-center">
+                        <v-card width="auto" min-width="250">
+                            <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="15vw" min-height="200px"></v-img>
+                            <v-card-title>自己紹介</v-card-title>
+                            <v-card-subtitle>
+                                初めまして、東京都在住のKoooZiiiと申します。24歳の男性です。
+                                フリーランスエージェント・SES営業を経て、現在はWebサービスの立ち上げに従事しております。
+                                また、個人的にはゲームやアプリを開発するコミュニティーを運営しております。
+                                私でお力に慣れることがございましたら、是非お声がけ頂けると嬉しいです！
+                                対応可能範囲については、別ページにてご確認下さいませ。
+                            </v-card-subtitle>
+                            <v-card-actions>
+                                <v-btn color="#00acee" text href="https://twitter.com/Koooziii1" >Twitter</v-btn>
+                                <v-btn color="#008000" text href="https://github.com/Kooziiii">Github</v-btn>
+                                <v-spacer></v-spacer>
+                                <v-btn icon @click="show = !show">
+                                    <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                                </v-btn>
+                            </v-card-actions>
+                            <v-expand-transition>
+                                <div v-show="show">
+                                    <v-divider></v-divider>
+                                    <v-card-text>
+                                        Hi, my name is KoooZiii and I live in Tokyo. I’m 24 year old man.
+                                        After working as a freelance agent and SES sales,
+                                        I am currently engaged in launching Web services.
+                                        Also, I personally run a community that develops games and apps.
+                                        If you have any experience with me, I would be happy if you could speak out!
+                                        Please see another page for the applicable range.
+                                    </v-card-text>
+                                </div>
+                            </v-expand-transition>
+                        </v-card>
+                    </v-col>
+                    <v-col lg="7" md="7" sm="12">
+                        <v-timeline>
+                            <v-timeline-item
+                                    v-for="(event, i) in events"
+                                    :key="i"
+                                    color="#536DFE"
+                            >
+                                <template v-slot:opposite>
+                                    <span class="text--black" v-text="event.time"></span>
+                                </template>
+                                <v-card class="elevation-2">
+                                    <v-card-text v-text="event.text"></v-card-text>
+                                </v-card>
+                            </v-timeline-item>
+                        </v-timeline>
+                    </v-col>
+                </v-row>
+            </v-container>
+    </v-content>
+</template>
+<script>
+    export default {
+        data: () => ({
+            show: false,
+            events: [
+                {
+                    time: "1996年",
+                    text: '鹿児島にて爆誕する',
+                },
+                {
+                    time: "2014年",
+                    text: '鹿児島の公立高校卒業後、信州大学経済学部に入学',
+                },
+                {
+                    time: "2017~18年",
+                    text: '大学在学中に、不動産ベンチャーにてインターンを経験',
+                },
+                {
+                    time: "2018年",
+                    text: 'プログラミングスクールを経て、フリーランス支援会社に営業職として就職',
+                },
+                {
+                    time: "2019年~現在",
+                    text: '競合会社へ転職、その後、転職先上司と共に会社の立ち上げ',
+                },
+            ],
+        }),
+    }
+</script>
+
+
+    <!-- <template>
     <v-container>
         <v-content></v-content>
         <v-row dense>
@@ -18,8 +113,6 @@
                                     <v-list-item class="pl-0">
                                         <v-btn class="px-2" href="https://qiita.com/KoooZiiii">Qiita</v-btn>
                                         <v-btn class="ml-2 px-2" href="https://github.com/Kooziiii">Github</v-btn>
-
-                                        <!-- TODO paizaボタンを追加する-->
 
                                     </v-list-item>
                                 </v-list-item-content>
@@ -128,4 +221,4 @@
       ]
     })
   }
-</script>
+</script>-->

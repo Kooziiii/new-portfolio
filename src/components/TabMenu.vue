@@ -4,7 +4,7 @@
                 v-model="drawer"
                 absolute
                 temporary
-                width="100%">
+                width="70%">
             <v-btn
                     width="100%"
                     color="white"
@@ -14,7 +14,7 @@
                     v-for="link in links" :key="link.text"
                     router :to="link.route">{{link.text}}</v-btn>
         </v-navigation-drawer>
-        <v-app-bar app extended color="white" extension-height="14">
+        <v-app-bar app extended color="white" extension-height="14" elevation="10">
             <v-toolbar-title class="mt-3">
                 <v-tab color="transparent" :ripple="false" height="100%" width="100%" router to='/'>
                     <v-img width="15vw" min-width="150px" src="../assets/KoooZiii's-logo.png"></v-img>

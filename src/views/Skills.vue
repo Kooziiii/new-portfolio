@@ -1,5 +1,97 @@
 <template>
-    <v-container>
+    <v-content>
+        <v-content></v-content>
+        <v-row>
+            <v-col cols="12">
+                <div class=" font-italic text--black text--secondary display-2 text-center font-weight-bold mb-5">Services</div>
+            </v-col>
+        </v-row>
+        <v-container>
+            <v-row>
+                <v-col v-for="(item, i) in items" :key="i" cols="12" lg="6">
+                    <v-card color='white' elevation="20">
+                        <div class="justify-space-between">
+                            <v-card-title class="black--text text--secondary font-weight-bold pt-2 pb-2 pl-5" v-text="item.title"></v-card-title>
+                            <v-divider color="#536DFE" bold></v-divider>
+                            <v-row justify="center">
+                                <v-col cols="4" align-self="center" px="0">
+                                    <v-layout justify-center>
+                                    <v-avatar class="ml-5" tile width="10vw" min-width="100px" height="7vw" min-height="70px">
+                                        <v-img height="100%" :src="item.img"></v-img>
+                                    </v-avatar>
+                                    </v-layout>
+                                </v-col>
+                                <v-col cols="8" px="0">
+                                    <v-card-text class="black--text" v-text="item.text"></v-card-text>
+                                </v-col>
+                            </v-row>
+                            <!--<v-card-title class="black--text font-weight-black pt-2 pb-2 pl-5" v-text="item.title"></v-card-title>
+                            <v-divider color="#536DFE"></v-divider>
+                            <v-list color="white">
+                                <v-list-item>
+                                    <v-list-item-avatar class="mt-1 ml-5">
+                                        <v-icon large :color="item.icon01color">{{item.icon01}}</v-icon>
+                                    </v-list-item-avatar>
+                                    <v-list-item-title v-text="item.text01" class="black--text subtitle-1 font-weight-bold"></v-list-item-title>
+                                </v-list-item>
+                                <v-list-item>
+                                    <v-list-item-avatar class="mt-1 ml-5">
+                                        <v-icon large :color="item.icon02color">{{item.icon02}}</v-icon>
+                                    </v-list-item-avatar>
+                                    <v-list-item-title v-text="item.text02" class="black--text subtitle-1 font-weight-bold"></v-list-item-title>
+                                </v-list-item>
+                                <v-list-item>
+                                    <v-list-item-avatar class="mt-1 ml-5">
+                                        <v-icon large :color="item.icon03color">{{item.icon03}}</v-icon>
+                                    </v-list-item-avatar>
+                                    <v-list-item-title v-text="item.text03" class="black--text subtitle-1 font-weight-bold"></v-list-item-title>
+                                </v-list-item>
+                            </v-list>-->
+                        </div>
+                    </v-card>
+
+                </v-col>
+            </v-row>
+        </v-container>
+    </v-content>
+</template>
+
+<script>
+    export default {
+        data: () => ({
+            items: [
+                {
+                    title:'Webサイト制作・運用',
+                    text:"企業や個人WEBサイトの制作が可能です。テキスト作成やデザイン・コーディング〜ドメイン取得・公開まで一貫して" +
+                        "お任せ下さい。また、WordPress等のCMSを使用したWebサイトの制作も経験がございます。\n" +
+                        "「こんなサイトが欲しい！」にお答えします。",
+                    img:require('@/assets/avatar03.svg')
+                },
+                {
+                    title: 'Webサービスの立ち上げ・ディレクション',
+                    text:"これまで複数のWebサービスやアプリの企画・立ち上げ・ディレクションの経験がございます。" +
+                        "企画書作成やワイヤーフレームの作成〜、マネタイズ考案、外注を含む全体の進捗管理等" +
+                        "を経験しており、スムーズなサービス開発実現のお手伝いを致します。",
+                    img:require('@/assets/avatar02.svg')
+                },
+                {
+                    title: 'カジュアルゲーム開発・運用',
+                    text:"エンジニア等のメンバー数名とゲーム開発チームを組んでおります。" +
+                        "「こんなゲームがあったら絶対流行る！」というアイデアがありましたら是非ご連絡下さい。" +
+                        "是非一緒に実現させましょう！※弊チームの第一弾ゲームは、2020年8月リリース予定です。",
+                    img:require('@/assets/avatar01.svg')
+                },
+                {
+                    title:'IT分野の何でも屋!!',
+                    text:"「こんなサービスを思い付いたんだけど、どのくらいで作れるの?」や「プロジェクトでエンジニアが必要になったから" +
+                        "紹介して欲しい!」等、サービス開発に関係することでしたら何でもご相談下さい！　お力になれるよう尽力致します。",
+                    img:require('@/assets/avatar04.svg')
+                }
+            ]
+        })
+    }
+</script>
+    <!--<v-container>
         <v-content></v-content>
         <v-row dense justify="center" align-content="center" align="center">
             <v-item-group v-model="window" class="mr-6" mandatory>
@@ -13,7 +105,6 @@
             </v-item-group>
         <v-col class="mt-3">
             <v-window v-model="window" class="elevation-15" vertical>
-                <!-- windowごとのchartの切り替えの方法が分からなかった為、3回記述を繰り返し-->
                 <v-window-item>
                     <v-card class="justify-center font-weight-bold pt-5 px-3">
                         <v-container>
@@ -115,4 +206,4 @@
             }
         ),
     }
-</script>
+</script>-->

@@ -1,29 +1,27 @@
 <template>
-    <v-container class="mt-12">
-        <v-row dense justify="center" class="mt-12">
-            <v-col v-for="(item, i) in items" :key="i" class="px-3" lg="4" sm="12" md="12">
-                <v-card :color="item.color" elevation="15" dark class="mx-auto">
-                    <div class="justify-space-between">
-                        <div>
-                            <v-card-title class="black--text font-weight-bold pt-2 pb-1 subtitle-1" v-text="item.title"></v-card-title>
-                            <v-divider class="grey lighten-1"></v-divider>
-                            <v-carousel height="180" hide-delimiter-background show-arrows-on-hover>
-                                <v-carousel-item><v-img :src="item.image01" height="100%"> </v-img></v-carousel-item>
-                                <v-carousel-item><v-img :src="item.image02" height="100%"> </v-img></v-carousel-item>
-                                <v-carousel-item><v-img :src="item.image03" height="100%"> </v-img></v-carousel-item>
-                            </v-carousel>
-                            <v-card-subtitle class="black--text font-weight-bold pt-5 body" v-text="item.subtitle"></v-card-subtitle>
-                            <v-divider class="grey lighten-1"></v-divider>
-                            <v-card-text class="black--text font-weight-bold pb-1 pt-3">・言語/FW/TOOL：</v-card-text>
-                            <v-card-text class="black--text font-weight-bold pb-2 pt-1" v-text="item.skill"></v-card-text>
-                            <v-card-text class="black--text font-weight-bold pb-1 pt-3">・制作期間：</v-card-text>
-                            <v-card-text class="black--text font-weight-bold pb-2 pt-1" v-text="item.period"></v-card-text>
-                        </div>
-                    </div>
-                </v-card>
+    <v-content>
+        <v-content></v-content>
+        <v-row>
+            <v-col cols="12">
+                <div class=" font-italic text--black text--secondary display-2 text-center font-weight-bold mb-5">Skills</div>
             </v-col>
         </v-row>
+    <v-container class="mt-12">
+        <v-row justify="center">
+            <v-expansion-panels popout>
+                <v-expansion-panel
+                        v-for="(item,i) in 5"
+                        :key="i"
+                >
+                    <v-expansion-panel-header>Item</v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+            </v-expansion-panels>
+        </v-row>
     </v-container>
+    </v-content>
 </template>
 <script>
     export default {
