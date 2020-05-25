@@ -2,7 +2,7 @@
     <nav>
         <v-navigation-drawer
                 v-model="drawer"
-                absolute
+                fixed
                 temporary
                 width="70%">
             <v-btn
@@ -11,8 +11,8 @@
                     elevation="0"
                     class="font-weight-bold"
                     x-large
-                    v-for="item in items" :key="item.text"
-                    router :to="item.route">{{item.text}}</v-btn>
+                    v-for="link in links" :key="link.text"
+                    router :to="link.route">{{link.text}}</v-btn>
         </v-navigation-drawer>
         <v-app-bar app extended color="white" extension-height="14" elevation="10">
             <v-toolbar-title class="mt-3">
@@ -26,16 +26,18 @@
                     class="hidden-md-and-up mt-3">
                 <v-btn color="white" elevation="0"><v-icon x-large>mdi-menu</v-icon></v-btn>
             </v-toolbar-items>
-            <v-tabs class="hidden-sm-and-down mr-10"  right>
+            <v-toolbar-items class="hidden-sm-and-down">
                 <v-tab
+                        retain-focus-on-click="true"
                         color="white"
                         class="mt-4
                         font-weight-bold"
                         elevation="0"
                         large
-                        v-for="item in items" :key="item.text" router :to="item.route">
-                        <v-icon left>{{item.icon}}</v-icon> {{item.text}}</v-tab>
-            </v-tabs>
+                        :ripple="{ center: true }"
+                        v-for="link in links" :key="link.text" router :to="link.route">
+                        <v-icon left>{{link.icon}}</v-icon> {{link.text}}</v-tab>
+            </v-toolbar-items>
         </v-app-bar>
     </nav>
 </template>
@@ -45,7 +47,7 @@
         data() {
             return {
                 drawer: null,
-                items:[
+                links:[
                     {icon:"mdi-account-box",text: 'aboutme',route: '/about'},
                     {icon:"mdi-clipboard-text",text: 'service',route:'/skills'},
                     {icon: "mdi-message-text",text: 'contact',route:'/contact'}
