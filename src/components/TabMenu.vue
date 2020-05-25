@@ -26,18 +26,19 @@
                     class="hidden-md-and-up mt-3">
                 <v-btn color="white" elevation="0"><v-icon x-large>mdi-menu</v-icon></v-btn>
             </v-toolbar-items>
-            <v-toolbar-items class="hidden-sm-and-down">
+            <v-tabs class="hidden-sm-and-down">
+                <v-spacer></v-spacer>
                 <v-tab
                         retain-focus-on-click="true"
                         color="white"
-                        class="mt-4
+                        class="mt-4 mr-10
                         font-weight-bold"
                         elevation="0"
                         large
                         :ripple="{ center: true }"
                         v-for="link in links" :key="link.text" router :to="link.route">
                         <v-icon left>{{link.icon}}</v-icon> {{link.text}}</v-tab>
-            </v-toolbar-items>
+            </v-tabs>
         </v-app-bar>
     </nav>
 </template>
