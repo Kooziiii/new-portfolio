@@ -11,8 +11,8 @@
                     elevation="0"
                     class="font-weight-bold"
                     x-large
-                    v-for="link in links" :key="link.text"
-                    router :to="link.route">{{link.text}}</v-btn>
+                    v-for="item in items" :key="item.text"
+                    router :to="item.route">{{item.text}}</v-btn>
         </v-navigation-drawer>
         <v-app-bar app extended color="white" extension-height="14" elevation="10">
             <v-toolbar-title class="mt-3">
