@@ -26,16 +26,16 @@
                     class="hidden-md-and-up mt-3">
                 <v-btn color="white" elevation="0"><v-icon x-large>mdi-menu</v-icon></v-btn>
             </v-toolbar-items>
-            <v-toolbar-items class="hidden-sm-and-down">
+            <v-tabs class="hidden-sm-and-down mr-10"  right>
                 <v-tab
                         color="white"
                         class="mt-4
                         font-weight-bold"
                         elevation="0"
                         large
-                        v-for="link in links" :key="link.text" router :to="link.route">
-                        <v-icon left>{{link.icon}}</v-icon> {{link.text}}</v-tab>
-            </v-toolbar-items>
+                        v-for="item in items" :key="item.text" router :to="item.route">
+                        <v-icon left>{{item.icon}}</v-icon> {{item.text}}</v-tab>
+            </v-tabs>
         </v-app-bar>
     </nav>
 </template>
@@ -45,7 +45,7 @@
         data() {
             return {
                 drawer: null,
-                links:[
+                items:[
                     {icon:"mdi-account-box",text: 'aboutme',route: '/about'},
                     {icon:"mdi-clipboard-text",text: 'service',route:'/skills'},
                     {icon: "mdi-message-text",text: 'contact',route:'/contact'}
