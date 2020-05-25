@@ -4,6 +4,7 @@
         <v-row>
             <v-col cols="12">
                 <div class=" font-italic text--black text--secondary display-2 text-center font-weight-bold mb-5"> Introduce</div>
+                <v-divider></v-divider>
             </v-col>
         </v-row>
             <v-container>
@@ -13,11 +14,11 @@
                             <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="15vw" min-height="200px"></v-img>
                             <v-card-title>自己紹介</v-card-title>
                             <v-card-subtitle>
-                                初めまして、東京都在住のKoooZiiiと申します。24歳の男性です。
+                                初めまして、東京都在住のKoooZiiiと申します。24歳(男)です。
                                 フリーランスエージェント・SES営業を経て、現在はWebサービスの立ち上げに従事しております。
                                 また、個人的にはゲームやアプリを開発するコミュニティーを運営しております。
-                                私でお力に慣れることがございましたら、是非お声がけ頂けると嬉しいです！
-                                対応可能範囲については、別ページにてご確認下さいませ。
+                                私でお力になれることがございましたら、是非お声がけ頂けると嬉しいです。
+                                どうぞよろしくお願いいたします。
                             </v-card-subtitle>
                             <v-card-actions>
                                 <v-btn color="#00acee" text href="https://twitter.com/Koooziii1" >Twitter</v-btn>
@@ -69,11 +70,11 @@
             events: [
                 {
                     time: "1996年",
-                    text: '鹿児島にて爆誕する',
+                    text: '鹿児島県鹿児島市で生まれる',
                 },
                 {
                     time: "2014年",
-                    text: '鹿児島の公立高校卒業後、信州大学経済学部に入学',
+                    text: '鹿児島の公立高校卒業後、国立信州大学経済学部に入学',
                 },
                 {
                     time: "2017~18年",
@@ -85,7 +86,7 @@
                 },
                 {
                     time: "2019年~現在",
-                    text: '競合会社へ転職、その後、転職先上司と共に会社の立ち上げ',
+                    text: '競合会社へ転職、その後、転職先上司と共に会社の立ち上げ、Webサービス開発に従事',
                 },
             ],
         }),

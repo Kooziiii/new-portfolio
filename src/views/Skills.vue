@@ -4,6 +4,7 @@
         <v-row>
             <v-col cols="12">
                 <div class=" font-italic text--black text--secondary display-2 text-center font-weight-bold mb-5">Services</div>
+                <v-divider></v-divider>
             </v-col>
         </v-row>
         <v-container>

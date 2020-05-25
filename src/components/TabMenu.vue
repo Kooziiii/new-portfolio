@@ -49,8 +49,7 @@
                 drawer: null,
                 links:[
                     {icon:"mdi-account-box",text: 'aboutme',route: '/about'},
-                    {icon:"mdi-chart-bar",text: 'outputs',route:'/outputs'},
-                    {icon:"mdi-clipboard-text",text: 'skills',route:'/skills'},
+                    {icon:"mdi-clipboard-text",text: 'service',route:'/skills'},
                     {icon: "mdi-message-text",text: 'contact',route:'/contact'}
                 ]
             }
