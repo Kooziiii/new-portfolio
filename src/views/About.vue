@@ -14,7 +14,7 @@
                             <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="15vw" min-height="200px"></v-img>
                             <v-card-title>自己紹介</v-card-title>
                             <v-card-subtitle>
-                                初めまして、東京都在住のKoooZiiiと申します。24歳(男)です。
+                                初めまして、東京都在住のKoooZiiiと申します。
                                 フリーランスエージェント・SES営業を経て、現在はWebサービスの立ち上げに従事しております。
                                 また、個人的にはゲームやアプリを開発するコミュニティーを運営しております。
                                 私でお力になれることがございましたら、是非お声がけ頂けると嬉しいです。
@@ -32,7 +32,7 @@
                                 <div v-show="show">
                                     <v-divider></v-divider>
                                     <v-card-text>
-                                        Hi, my name is KoooZiii and I live in Tokyo. I’m 24 year old man.
+                                        Hi, my name is KoooZiii and I live in Tokyo.
                                         After working as a freelance agent and SES sales,
                                         I am currently engaged in launching Web services.
                                         Also, I personally run a community that develops games and apps.
