@@ -28,13 +28,11 @@
             </v-toolbar-items>
             <v-toolbar-items class="hidden-sm-and-down">
                 <v-tab
-                        retain-focus-on-click="true"
                         color="white"
                         class="mt-4
                         font-weight-bold"
                         elevation="0"
                         large
-                        :ripple="{ center: true }"
                         v-for="link in links" :key="link.text" router :to="link.route">
                         <v-icon left>{{link.icon}}</v-icon> {{link.text}}</v-tab>
             </v-toolbar-items>
