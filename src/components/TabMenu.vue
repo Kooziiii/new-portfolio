@@ -47,7 +47,7 @@
             return {
                 drawer: null,
                 links:[
-                    {icon:"mdi-account-box",text: 'aboutme',route: '/about'},
+                    {icon:"mdi-account-box",text: 'Introduce',route: '/about'},
                     {icon:"mdi-clipboard-text",text: 'service',route:'/skills'},
                     {icon: "mdi-message-text",text: 'contact',route:'/contact'}
                 ]
